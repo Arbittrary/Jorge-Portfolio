@@ -99,10 +99,27 @@
             letter-spacing: -0.02em;
         }
 
-        .subtitle {
-            margin: 2px 0 0;
+        $1
+
+        /* meta block for Current/Focus rows */
+        .meta-block p {
+            margin: 6px 0 0;
             color: var(--muted);
-            font-size: clamp(14px, 1.2vw + 10px, 18px);
+        }
+
+        .meta-block .label {
+            color: var(--text);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .meta-block a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .meta-block a:hover {
+            text-decoration: underline;
         }
 
         .actions {
@@ -203,21 +220,29 @@
     <div class="container">
         <header class="glow card" style="padding:20px;">
             <!-- Replace profile.jpg with your image file name placed in the same repo folder -->
-            <img class="avatar" src="JorgeSuit.jpg" alt="Portrait of Jorge Ortiz"
+            <img class="avatar" src="profile.jpg" alt="Portrait of Jorge Ortiz"
                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23e2e8f0\'/%3E%3Ctext x=\'50%25\' y=\'52%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui, -apple-system, Segoe UI, Roboto, Arial\' font-size=\'16\' fill=\'%23627486\'%3EAdd profile.jpg%3C/text%3E%3C/svg%3E'" />
 
             <div class="title">
                 <h1>Jorge Ortiz</h1>
-                <p class="subtitle">IT Systems Analyst • CS @ FAU • Cybersecurity & AI</p>
+                $1
+                <div class="meta-block">
+                    <p><span class="label">Current:</span>
+                        <a href="#" target="_blank" rel="noopener" title="Company website">
+                            IT Systems Analyst @ RCC Associates
+                        </a>
+                    </p>
+                    <p><span class="label">Focus:</span> Computer Science, Cybersecurity &amp; AI @ FAU</p>
+                </div>
                 <div class="actions">
                     <!-- Update the href below to your actual resume file in the repo, e.g., docs/Jorge_Ortiz_Resume.pdf -->
-                    <a class="btn" href="JorgeResume.pdf" download>
+                    <a class="btn" href="resume.pdf" download>
                         <span aria-hidden>⬇️</span> Download Resume (PDF)
                     </a>
-                    <a class="btn secondary" href="JorgeResume.pdf" target="_blank" rel="noopener">
+                    <a class="btn secondary" href="resume.pdf" target="_blank" rel="noopener">
                         <span aria-hidden>📄</span> View Resume in Browser
                     </a>
-                    <a class="btn secondary" href="https://github.com/Arbittrary" target="_blank" rel="noopener">
+                    <a class="btn secondary" href="https://github.com/jorge-ortiz" target="_blank" rel="noopener">
                         <span aria-hidden>🐙</span> GitHub
                     </a>
                     <!-- Optional: add your LinkedIn/email links -->
